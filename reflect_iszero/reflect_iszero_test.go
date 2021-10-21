@@ -31,23 +31,6 @@ func BenchmarkGoReflectIsZero(b *testing.B) {
 	}
 }
 
-func typeswitch(i interface{}) {
-	switch i.(type) {
-	case bool:
-		return
-	case int64:
-		return
-	case uint64:
-		return
-	case float64:
-		return
-	case string:
-		return
-	default:
-		return
-	}
-}
-
 func nativeiszero(i interface{}) bool {
 	return (i == 0)
 }
